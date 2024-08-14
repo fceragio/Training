@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <limits.h>
+#include <time.h>
 
-#define QUANTITY 100
+#define QUANTITY 500
 
 int main()
 {
@@ -11,6 +12,8 @@ int main()
 	int not_to_duplicate[QUANTITY] = {num};
 	int	i = 1;
 	int j = 0;
+	srand(time(NULL));
+	
 	while(i < QUANTITY)
 	{
 		if (rand() % 2)
